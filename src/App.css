@@ -1,15 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0; }
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+:focus, :active {
+    outline: none; }
+
+a:focus, a:active {
+    outline: none; }
+
+nav, footer, header, aside {
+    display: block; }
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+    font-family: inherit; }
+
+input::-ms-clear {
+    display: none; }
+
+button {
+    cursor: pointer; }
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0; }
+
+a, a:visited {
+    text-decoration: none; }
+
+a:hover {
+    text-decoration: none; }
+
+ul li {
+    list-style: none; }
+
+img {
+    vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit; }
+
 .App {
     width: 100%;
     height: 100vh;
     background-color: rgb(40, 40, 40);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .form-wrapper {
-    width: 500px;
+    width: 600px;
     height: 600px;
+}
+
+.review-form {
+    width: 400px;
+    height: 600px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid rgb(60, 60, 60);
+    box-shadow: 5px 5px 0 rgb(60, 60, 60);
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews {
+    background-color: white;
+    width: 100%;
+    flex: 1 1 auto;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: scroll;
+}
+
+.review {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(60, 60, 60);
+    box-shadow: 3px 3px 0 rgba(60, 60, 60, 0.5);
+}
+
+.separator::after {
+    content: " | "; /* Разделитель */
+    color: gray; /* Цвет */
+    margin: 0 8px; /* Отступ */
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.film_name {
+    font-weight: 600;
 }
 
 .form-container {
@@ -30,6 +139,19 @@
     flex: 1 1 auto;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 24px;
+}
+
+.input-container > p {
+    color: white;
+    font-size: 20px;
+}
+
+.input-container > input {
+    font-size: 24px;
 }
 .input-container > textarea {
     width: 100%;
@@ -50,6 +172,9 @@
     border-radius: 30px;
     position: relative;
     top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .green {
